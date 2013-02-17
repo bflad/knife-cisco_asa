@@ -57,11 +57,11 @@ module CiscoAsaKnifePlugin
 
     def get_cisco_asa_config
       config[:cisco_asa_password] = ask("Cisco Password for #{get_config(:cisco_asa_username)}: ") { |q| q.echo = "*" } unless get_config(:cisco_asa_password)
-      config[:cisco_asa_enable_password] = ask("Enable Password for #{get_config(:cisco_asa_host)}: ") { |q| q.echo = "*" } unless get_config(:cisco_asa_enable_password)
+      config[:cisco_asa_enable_password] = ask("Enable Password for #{get_config(:cisco_asa_hostname)}: ") { |q| q.echo = "*" } unless get_config(:cisco_asa_enable_password)
     end
 
     def run_config_commands(commands)
-      asa = Cisco::Base.new(:host => get_config(:cisco_asa_host), :user => get_config(:cisco_asa_username), :password => get_config(:cisco_asa_password), :transport => :ssh)
+      asa = Cisco::Base.new(:host => get_config(:cisco_asa_hostname), :user => get_config(:cisco_asa_username), :password => get_config(:cisco_asa_password), :transport => :ssh)
       asa.enable(get_config(:cisco_asa_enable_password))
       asa.cmd("conf t")
       commands.each do |command|

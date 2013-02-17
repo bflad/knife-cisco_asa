@@ -1,3 +1,7 @@
+## v0.1.3
+
+* Fixed ASA hostname references
+
 ## v0.1.2
 
 * Fixed handling of removing host with --nat

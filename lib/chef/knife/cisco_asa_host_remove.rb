@@ -41,7 +41,7 @@ module CiscoAsaKnifePlugin
       commands = []
 
       ui.info "Removing host from Cisco ASA:"
-      ui.info "#{ui.color "ASA:", :cyan} #{get_config(:cisco_asa_host)}"
+      ui.info "#{ui.color "ASA:", :cyan} #{get_config(:cisco_asa_hostname)}"
       ui.info "#{ui.color "Host:", :cyan} #{hostname}"
 
       if get_config(:nat)

@@ -58,7 +58,7 @@ module CiscoAsaKnifePlugin
       commands = []
 
       ui.info "Adding host to Cisco ASA:"
-      ui.info "#{ui.color "ASA:", :cyan} #{get_config(:cisco_asa_host)}"
+      ui.info "#{ui.color "ASA:", :cyan} #{get_config(:cisco_asa_hostname)}"
       ui.info "#{ui.color "Host:", :cyan} #{hostname}"
       ui.info "#{ui.color "IP:", :cyan} #{ip}"
 
