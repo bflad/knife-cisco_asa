@@ -21,7 +21,7 @@ module CiscoAsaKnifePlugin
     option :nat,
       :long => "--nat IP",
       :description => "NAT IP"
-    
+
     def run
       
       hostname = name_args.first.upcase
@@ -43,10 +43,12 @@ module CiscoAsaKnifePlugin
       ui.info "Removing host from Cisco ASA:"
       ui.info "#{ui.color "ASA:", :cyan} #{get_config(:cisco_asa_host)}"
       ui.info "#{ui.color "Host:", :cyan} #{hostname}"
-      ui.info "#{ui.color "NAT IP:", :cyan} #{natip}"
 
-      commands << "object network #{hostname}"
-      commands << "  no nat (inside,outside) static #{natip} dns"
+      if get_config(:nat)
+        ui.info "#{ui.color "NAT IP:", :cyan} #{get_config(:nat)}"
+        commands << "object network #{hostname}"
+        commands << "  no nat (inside,outside) static #{get_config(:nat)} dns"
+      end
 
       if get_config(:groups)
         get_config(:groups).split(",").each do |group|
