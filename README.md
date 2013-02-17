@@ -1,4 +1,4 @@
-# Knife RHN
+# knife-cisco_asa
 
 A knife plugin for managing Cisco ASA devices.
 
@@ -38,7 +38,7 @@ Adds a host to the device.
 * `--nat IP` - optionally setup static NAT IP
 * `--nat-dns` - optionally enable DNS translation for NAT
 
-### `knife cicso asa host remove HOST`
+### `knife cicso asa host remove NAME`
 
 Removes a host from the device.
 
