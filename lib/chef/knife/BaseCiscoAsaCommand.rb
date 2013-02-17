@@ -25,7 +25,7 @@ module CiscoAsaKnifePlugin
         :long => "--cisco-asa-enable-password PASSWORD",
         :description => "Enable password for Cisco ASA"
 
-      ption :cisco_asa_hostname,
+      option :cisco_asa_hostname,
         :short => "-h HOSTNAME",
         :long => "--cisco-asa-hostname HOSTNAME",
         :description => "The hostname for Cisco ASA"
