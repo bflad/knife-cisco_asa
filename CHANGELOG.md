@@ -1,3 +1,7 @@
+## 0.2.0
+
+* Backend class refactoring
+
 ## v0.1.4
 
 * Bumped version only.
