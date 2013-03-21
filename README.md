@@ -2,6 +2,10 @@
 
 A knife plugin for managing Cisco ASA devices.
 
+[![Gem Version](https://badge.fury.io/rb/knife-cisco_asa.png)](http://badge.fury.io/rb/knife-cisco_asa)
+&nbsp;
+[![Code Climate](https://codeclimate.com/github/bflad/knife-cisco_asa.png)](https://codeclimate.com/github/bflad/knife-cisco_asa)
+
 ## Installation
 
 Uses [cisco rubygem](https://github.com/jtimberman/ruby-cisco) for the backend.
